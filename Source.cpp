@@ -8,22 +8,24 @@ int checkInt()
 {
     while (true)
     {
-        cout << "Enter an integer number: ";
+        cout << "Enter an integer number: " << endl;
         int x;
         cin >> x;
-
-        if (cin.fail())
+            
+        if (cin.fail() || cin.get() != '\n')
         {
             cin.clear();
-            cin.ignore(32767, '\n');
+            cin.ignore(9999, '\n');
             cerr << "Your input is invalid. Try again." << endl;
         }
         else
         {
-            cin.ignore(32767, '\n');
+            cout << "Your int number: " << x << endl;
             return x;
         }
+         
     }
+
 }
 
 
@@ -33,11 +35,11 @@ int checkInt()
 int main()
 {
 	cout << "#################### TASK_1 ####################" << endl << endl;
+    
+        checkInt();
 
-    int num = checkInt();
-
-    cout << num << endl;
-        
+        //cout << "Your int number: " << num << endl;
+    
     
 
 	cout << endl << "#################### TASK_2 ####################" << endl << endl;
