@@ -28,25 +28,31 @@ int checkInt()
 
 }
 
+//#################### TASK_2 ####################
 
+template<class T, class S>
+basic_ostream<T, S>& endll(basic_ostream<T, S>& os)
+{
+    os.put(os.widen('\n'));
+    os.put(os.widen('\n'));
+    os.flush();
 
-
+    return os;
+}
 
 int main()
 {
 	cout << "#################### TASK_1 ####################" << endl << endl;
     
         checkInt();
-
-        //cout << "Your int number: " << num << endl;
-    
-    
+                
 
 	cout << endl << "#################### TASK_2 ####################" << endl << endl;
+
+    cout << "Hello," << endll;
+    cout << "world!";
 
 	
-
-	cout << endl << "#################### TASK_2 ####################" << endl << endl;
 
 	
 
